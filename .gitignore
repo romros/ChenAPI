@@ -1,0 +1,18 @@
+# Directoris de Node
+node_modules/
+
+# Directori de compilació de TypeScript
+dist/
+
+# Arxius de registre
+npm-debug.log
+yarn-error.log
+
+# Arxius de configuració d'editor
+.vscode/
+*.swp
+*.swo
+*.idea/
+
+# Husky
+.husky/

@@ -1,0 +1,33 @@
+{
+  "name": "chenapi",
+  "version": "1.0.0",
+  "description": "API per a la conversió de models Chen a formats DOT i SVG",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc -w",
+    "build-and-run": "tsc && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romros/ChenAPI.git"
+  },
+  "author": "Roman Roset",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/romros/ChenAPI/issues"
+  },
+  "homepage": "https://github.com/romros/ChenAPI#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "husky": "^8.0.3",
+    "typescript": "^5.1.6"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
