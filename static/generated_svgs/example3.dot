@@ -1,0 +1,22 @@
+graph ConceptualModel {
+layout=neato;
+overlap=scale;
+"ESTUDIANT" [shape=box, label="ESTUDIANT"];
+"CURS" [shape=box, label="CURS"];
+"INSTRUCTOR" [shape=box, label="INSTRUCTOR"];
+"ESTUDIANT_nom" [shape=ellipse, style="", label=< nom >, width=0.5, height=0.3, fontsize="10"];
+"ESTUDIANT" -- "ESTUDIANT_nom" [dir=none];
+"ESTUDIANT_ID" [shape=ellipse, style="", label=< <u>ID</u> >, width=0.5, height=0.3, fontsize="10"];
+"ESTUDIANT" -- "ESTUDIANT_ID" [dir=none];
+"CURS_ID" [shape=ellipse, style="", label=< <u>ID</u> >, width=0.5, height=0.3, fontsize="10"];
+"CURS" -- "CURS_ID" [dir=none];
+"CURS_títol" [shape=ellipse, style="", label=< títol >, width=0.5, height=0.3, fontsize="10"];
+"CURS" -- "CURS_títol" [dir=none];
+"MATRÍCULA" [shape=diamond, style=filled, color=black, fillcolor=lightgrey, label="MATRÍCULA"];
+"MATRÍCULA" -- "ESTUDIANT" [label="N:M", len=1.6];
+"MATRÍCULA" -- "CURS" [label="N:M", len=1.6];
+"IMPARTIR" [shape=diamond, style=filled, color=black, fillcolor=lightgrey, label="IMPARTIR"];
+"IMPARTIR" -- "INSTRUCTOR" [label="1:N", len=1.6];
+"IMPARTIR" -- "CURS" [label="N:1", len=1.6];
+}
+digraph {}

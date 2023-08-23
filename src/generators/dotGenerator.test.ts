@@ -44,3 +44,17 @@ test("generate dot from example2", async () => {
   expect(fs.existsSync(dotPath)).toBe(true);
   expect(fs.existsSync(svgPath)).toBe(true);
 });
+
+test("generate dot from example3", async () => {
+  const exampleData = loadFixture("example3.json");
+  const resultDot = generateDotFromJson(exampleData);
+
+  const [dotPath, svgPath] = await dotToSvg(
+    resultDot,
+    path.join(__dirname, "..", "..", "static", "generated_svgs"),
+    "example3"
+  );
+
+  expect(fs.existsSync(dotPath)).toBe(true);
+  expect(fs.existsSync(svgPath)).toBe(true);
+});
