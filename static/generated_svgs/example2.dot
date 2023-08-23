@@ -1,6 +1,6 @@
 graph ConceptualModel {
-rankdir=LR;
 layout=neato;
+overlap=scale;
 "STUDENTS" [shape=box, label="STUDENTS"];
 "COURSES" [shape=box, label="COURSES"];
 "PROFESSORS" [shape=box, label="PROFESSORS"];
@@ -27,22 +27,22 @@ layout=neato;
 "UNIVERSITY EMPLOYEES_Room Number" [shape=ellipse, style="", label=< Room Number >, width=0.5, height=0.3, fontsize="10"];
 "UNIVERSITY EMPLOYEES" -- "UNIVERSITY EMPLOYEES_Room Number" [dir=none];
 "ATTEND" [shape=diamond, style=filled, color=black, fillcolor=lightgrey, label="ATTEND"];
-"ATTEND" -- "STUDENTS" [label="N:M", dir=none];
-"ATTEND" -- "COURSES" [label="N:M", dir=none];
+"ATTEND" -- "STUDENTS" [label="N:M", len=1.6];
+"ATTEND" -- "COURSES" [label="N:M", len=1.6];
 "TEACH" [shape=diamond, style=filled, color=black, fillcolor=lightgrey, label="TEACH"];
-"TEACH" -- "PROFESSORS" [label="1:N", dir=none];
-"TEACH" -- "COURSES" [label="N:1", dir=none];
+"TEACH" -- "PROFESSORS" [label="1:N", len=1.6];
+"TEACH" -- "COURSES" [label="N:1", len=1.6];
 "WORK FOR" [shape=diamond, style=filled, color=black, fillcolor=lightgrey, label="WORK FOR"];
-"WORK FOR" -- "ASSISTANTS" [label="N:1", dir=none];
-"WORK FOR" -- "PROFESSORS" [label="1:N", dir=none];
+"WORK FOR" -- "ASSISTANTS" [label="N:1", len=1.6];
+"WORK FOR" -- "PROFESSORS" [label="1:N", len=1.6];
 "PREREQUISITE" [shape=diamond, style=filled, color=black, fillcolor=lightgrey, label="PREREQUISITE"];
-"PREREQUISITE" -- "COURSES" [label="N:1", dir=none];
-"PREREQUISITE" -- "COURSES" [label="1:N", dir=none];
+"PREREQUISITE" -- "COURSES" [label="N:1", len=1.6];
+"PREREQUISITE" -- "COURSES" [label="1:N", len=1.6];
 "EMPLOYEE" [shape=diamond, style=filled, color=black, fillcolor=lightgrey, label="EMPLOYEE"];
-"EMPLOYEE" -- "PROFESSORS" [label="1:1", dir=none];
-"EMPLOYEE" -- "UNIVERSITY EMPLOYEES" [label="1:1", dir=none];
+"EMPLOYEE" -- "PROFESSORS" [label="1:1", len=1.6];
+"EMPLOYEE" -- "UNIVERSITY EMPLOYEES" [label="1:1", len=1.6];
 "EMPLOYEE" [shape=diamond, style=filled, color=black, fillcolor=lightgrey, label="EMPLOYEE"];
-"EMPLOYEE" -- "ASSISTANTS" [label="1:1", dir=none];
-"EMPLOYEE" -- "UNIVERSITY EMPLOYEES" [label="1:1", dir=none];
+"EMPLOYEE" -- "ASSISTANTS" [label="1:1", len=1.6];
+"EMPLOYEE" -- "UNIVERSITY EMPLOYEES" [label="1:1", len=1.6];
 }
 digraph {}

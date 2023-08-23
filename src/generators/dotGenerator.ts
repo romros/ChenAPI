@@ -78,7 +78,7 @@ export function generateRelationshipsDot(
       const cardinality = entity.CARDINALITY;
 
       dotOutput.push(
-        `"${relationshipName}" -- "${entityName}" [label="${cardinality}", dir=none];`
+        `"${relationshipName}" -- "${entityName}" [label="${cardinality}", len=1.6];`
       );
     }
   }
@@ -92,8 +92,8 @@ export function generateDotFromJson(jsonModel: ChenNotationModel): string {
 
   const dotParts = [
     "graph ConceptualModel {",
-    "rankdir=LR;",
     "layout=neato;",
+    "overlap=scale;",
     generateEntitiesDot(entities),
     generateAttributesDot(entities),
     generateRelationshipsDot(relationships),

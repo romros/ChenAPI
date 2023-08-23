@@ -1,6 +1,6 @@
 graph ConceptualModel {
-rankdir=LR;
 layout=neato;
+overlap=scale;
 "STUDENT" [shape=box, label="STUDENT"];
 "SUBJECT" [shape=box, label="SUBJECT"];
 "PROFESSOR" [shape=box, label="PROFESSOR"];
@@ -21,10 +21,10 @@ layout=neato;
 "PROFESSOR_Name" [shape=ellipse, style="", label=< Name >, width=0.5, height=0.3, fontsize="10"];
 "PROFESSOR" -- "PROFESSOR_Name" [dir=none];
 "ENROLLED" [shape=diamond, style=filled, color=black, fillcolor=lightgrey, label="ENROLLED"];
-"ENROLLED" -- "STUDENT" [label="N", dir=none];
-"ENROLLED" -- "SUBJECT" [label="N", dir=none];
+"ENROLLED" -- "STUDENT" [label="N", len=1.6];
+"ENROLLED" -- "SUBJECT" [label="N", len=1.6];
 "TEACHES" [shape=diamond, style=filled, color=black, fillcolor=lightgrey, label="TEACHES"];
-"TEACHES" -- "PROFESSOR" [label="1", dir=none];
-"TEACHES" -- "SUBJECT" [label="N", dir=none];
+"TEACHES" -- "PROFESSOR" [label="1", len=1.6];
+"TEACHES" -- "SUBJECT" [label="N", len=1.6];
 }
 digraph {}
